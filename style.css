@@ -1,0 +1,153 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  background: #edeef3;
+}
+
+.hero {
+  height: 253px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: linear-gradient(90deg, #196c79, #138395);
+  text-align: center;
+}
+
+.hero h1 {
+  margin: 56px 0 11px;
+  color: #c7f6ff;
+  font-size: 64px;
+  line-height: 1.2;
+  font-weight: 700;
+}
+
+.hero p {
+  margin: 0;
+  color: #a6d5df;
+  font-size: 18px;
+}
+
+.search {
+  position: absolute;
+  bottom: -27px;
+  width: min(700px, calc(100% - 36px));
+  height: 55px;
+  padding: 0 26px;
+  border: 1px solid #d9dfe5;
+  border-radius: 4px;
+  background: white;
+  box-shadow: 0 8px 20px rgba(30, 38, 50, 0.05);
+  color: #25313b;
+  font: inherit;
+  font-size: 20px;
+  outline-color: #1299b0;
+}
+
+.search::placeholder {
+  color: #aab7c4;
+  opacity: 1;
+}
+
+.content {
+  max-width: 840px;
+  margin: 0 auto;
+  padding: 67px 0 60px;
+}
+
+.emoji-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 17px;
+}
+
+.emoji-card {
+  min-height: 156px;
+  padding: 18px 15px 16px;
+  border: 1px solid #e0e2e7;
+  border-radius: 4px;
+  background: #fff;
+  box-shadow: 0 3px 3px rgba(0, 0, 0, 0.24);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.emoji-symbol {
+  font-size: 39px;
+  line-height: 47px;
+}
+
+.emoji-card h2 {
+  margin: 14px 0 11px;
+  color: #111;
+  text-decoration: underline;
+  font-size: 14px;
+  line-height: 17px;
+  font-weight: 700;
+}
+
+.emoji-card p {
+  margin: 0;
+  color: #3d424b;
+  font-size: 10px;
+  line-height: 14px;
+}
+
+.message {
+  text-align: center;
+  color: #525965;
+  font-size: 16px;
+}
+
+@media (max-width: 900px) {
+  .content {
+    margin: 0 20px;
+  }
+}
+
+@media (max-width: 620px) {
+  .hero {
+    height: 245px;
+  }
+
+  .hero h1 {
+    margin-top: 65px;
+    font-size: 44px;
+  }
+
+  .hero p {
+    font-size: 15px;
+  }
+
+  .search {
+    font-size: 17px;
+  }
+
+  .emoji-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .content {
+    max-width: 400px;
+  }
+}
+
+.error {
+  color: #b42318;
+}
+
+.emoji-card {
+  transition: transform 0.15s ease;
+}
+
+.emoji-card:hover {
+  transform: translateY(-3px);
+}
